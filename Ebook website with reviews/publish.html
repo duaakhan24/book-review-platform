@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="publish.css" />
+     <!--=============== FAVICON ===============-->
+     <link rel="shortcut icon" href="images/publish.png" type="image/x-icon">
+     
+    <title>Publish Books</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+           <a href="#" class="nav-logo">
+               <i class="ri-book-3-line"></i>Bookworm-Opinions
+           </a>
+           <div class="nav-menu">
+               <ul class="nav-list">
+                   <li class="nav-item">
+                       <a href="index.html" class="nav-link active-link">
+                           <i class="ri-home-2-line"></i>
+                           <span>Home</span>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+           <div class="nav-actions">
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+           </div>
+        </nav>
+     </header>
+
+    <main class="main"></main>
+
+    <!--==================== PUBLISH  ====================-->
+    <section class="publish section" id="publish">
+        <div class="publish-container container grid">
+            <div class="publish-data">
+                <h2 class="publish-title section-title">Want to Publish your book?</h2>
+                <p class="public-description">Share your masterpiece with a passionate audience! Upload your book today and connect with readers ready to dive into your story.</p>
+            </div>
+            <div class="publish-images">
+                <img src="images/discount-book-1.png" alt="image" class="publish-img-1">
+                <img src="images/discount-book-2.png" alt="image" class="publish-img-2">
+            </div>
+        </div>
+    </section>
+
+    <!--==================== BOOK PUBLISH FORM ====================-->
+    <section class="book-submission container">
+        
+        <div class="parent-container">
+            <h2 class="publish-title section-title">Publish a Book</h2>
+        </div>
+        
+       
+        <form id="book-form">
+            <label for="title" class="heading-rate">Title:</label>
+            <input type="text" id="title" name="title" class="answer-rate" required><br><br>
+          
+            <label for="author" class="heading-rate">Author:</label>
+            <input type="text" id="author" name="author" class="answer-rate" required><br><br>
+          
+            <label for="genre" class="heading-rate">Genre:</label>
+            <input type="text" id="genre" name="genre" class="answer-rate" required><br><br>
+          
+            <label for="cover-image" class="heading-rate">Cover Image:</label>
+            <input type="file" id="cover-image" name="cover-image" class="answer-rate" accept="image/*" required><br><br>
+          
+            <button id="submit-btn" class="button" type="submit"> Publish </button>
+          </form>
+          
+          <!-- Area to display the submitted book -->
+          <div id="book-display" class="book-display"></div>
+
+    </section>
+
+    <!-- ================== BOOKS BY AUTHOR ================================== -->
+     <!--===Project-Section======================================================-->
+  <section id="project" >
+    <div class="container-author">
+        <h2 class="publish-title section-title">Published Books by Different Authors </h2>
+    <div class="card__container"  id="book-list">
+        <article class="card__article">
+           <img src="images/book cover/jannat ka pattay.png" alt="image" class="card__img">
+
+           <div class="card__data">
+              <span class="card__description"> Jannat ka Pattay </span>
+              <h2 class="card__title"> Nemhrah Ahmed </h2>
+              <h2 class="card__description"> Islamic  </h2>
+              <a href="#" class="card__button">Read Book </a>
+           </div>
+        </article>
+
+        <article class="card__article">
+           <img src="images/publish2.png" alt="image" class="card__img">
+
+           <div class="card__data">
+            <span class="card__description"> Powerfull </span>
+            <h2 class="card__title"> Elan Joseph  </h2>
+            <h2 class="card__description">Fiction </h2>
+              <a href="#" class="card__button">Read Book </a>
+           </div>
+        </article>
+
+        <article class="card__article">
+           <img src="images/book cover/2.png" alt="image" class="card__img">
+
+           <div class="card__data">
+            <span class="card__description">Secrets of Divine Love  </span>
+            <h2 class="card__title"> A.Helwa  </h2>
+            <h2 class="card__description"> Romance </h2>
+              <a href="#" class="card__button">Read More</a>
+           </div>
+        </article>
+     </div>
+     
+
+  </section>
+
+     <!--=========================================== FOOTER ===========================================================================-->
+     <footer class="footer">
+        <div class="footer-container container grid">
+           <div>
+               <a href="#" class="footer-logo">
+                   <i class="ri-book-2-line"></i>BookWorm-Opinions
+               </a>
+
+               <p class="footer-description">
+                   Give your valuable reviews and explore  <br>
+                   the best eBooks from all your <br>
+                   favorite writers.
+               </p>
+           </div>
+
+           <div class="footer-data grid">
+
+               <div>
+                        <h3 class="footer-title"> About </h3>
+                       <ul class="footer-links">
+                         <li>
+                             <a href="#" class="footer-link"> Reviews</a>
+                         </li>
+     
+                         <li>
+                             <a href="#" class="footer-link">FAQs</a>
+                         </li>
+                         <li>
+                           <a href="#" class="footer-link"> Privacy policy</a>
+                       </li>
+
+                         <li>
+                             <a href="#" class="footer-link">Terms of services</a>
+                         </li>
+                       </ul>
+             </div>
+
+             <div>
+               <h3 class="footer-title">Community </h3>
+              <ul class="footer-links">
+                <li>
+                    <a href="#" class="footer-link"> Feedback</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link"> Help center</a>
+                </li>
+              </ul>
+           </div>
+
+              <div>
+                       <h3 class="footer-title">Contact</h3>
+                        <ul class="footer-links">
+                      <li>
+                       <address class="footer-info">
+                           Gulshan e Iqbal  <br>
+                           Karachi 4321, Pakistan
+                       </address>
+                    </li>
+                    <li>
+                       <address class="footer-info">
+                           e.book@email.com <br>
+                           0987-654-321
+                       </address>
+                    </li>
+                  </ul>
+             </div>
+
+             <div>
+               <h3 class="footer-title">Socials </h3>
+             <div class="footer-social">
+               <a href="https://www.instagram.com/rehmattk24?igsh=MTQxcGtxOTduN2o4ZQ==" target="_blank"  class="footer-social-link">
+                   <i class="ri-instagram-line"></i>
+               </a>
+               <a href=" https://snapchat.com/t/L6rxQXdd" target="_blank"  class="footer-social-link">
+                   <i class="ri-snapchat-line"></i>
+               </a>
+               <a href="https://pin.it/3Z0qC63Vk" target="_blank"  class="footer-social-link">
+                   <i class="ri-pinterest-fill"></i>
+               </a>
+             </div>
+           </div>
+
+           </div>
+        </div>
+        <span class="footer-copy">
+           &#169; All Rights Reserved By RehmatKhan
+        </span>
+     </footer>
+
+  <!--========== SCROLL UP ==========-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="publishdarktheme.js"></script>
+</body>
+</html>

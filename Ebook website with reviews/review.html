@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="review.css" />
+
+     <!--=============== FAVICON ===============-->
+     <link rel="shortcut icon" href="images/review.png" type="image/x-icon">
+
+     <!--=============== REMIXICONS ===============-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+
+    
+    <title> Community Reviews </title>
+  </head>
+  <body>
+      <!--==================== HEADER ====================-->
+    
+        <header class="header" id="header">
+            <nav class="nav container">
+               <a href="#" class="nav-logo">
+                   <i class="ri-book-3-line"></i>Bookworm-Opinions</a>
+                   <div class="nav-menu">
+                       <ul class="nav-list">
+   
+                           <li class="nav-item">
+                               <a href="index.html" class="nav-link active-link">
+                                   <i class="ri-home-2-line"></i>
+                                   <span>Home </span>
+                               </a>
+                           </li>
+  
+   
+                       </ul>
+                   </div>
+   
+                   <div class="nav-actions">
+                       <!-- search button -->
+                       <i class="ri-search-2-line search-button " id="search-button"></i>
+   
+                     -  <!-- theme button -->
+                       <i class="ri-moon-line change-theme" id="theme-button"></i>
+                   </div>
+   
+            </nav>
+         </header>
+   
+         <!--==================== SEARCH ====================-->
+         <div class="search" id="search-content">
+            <form action="" class="search-form">
+               <i class="ri-search-2-line search-icon"></i>
+               <input type="search" placeholder="What are you looking for?" class="search-input">
+            </form>
+            <i class="ri-close-line search-close" id="search-close"></i>
+         </div>
+
+<!-- ======================= -->
+<main class="main">
+    <div class="container-review">
+        <div class="container__left-review">
+             
+          <!-- ==================== -->
+          <h1>Read our community readers reviews </h1>
+          <p>
+            Welcome to the Review Corner! Share your thoughts on your latest read and explore what others are saying. Your opinion matters here
+          </p>
+          <p>
+            Rate, review, and discuss! Dive into the world of books by reading reviews from fellow readers, or leave your own to guide others on their literary journey.
+          </p>
+          <button class="button"> Read our Community Reviews </button>
+        </div>
+
+<!-- ================================== REVIEW ==================================================== -->
+        <div class="container__right-review">
+          <div class="card-review">
+            <img src="images/girl1.png" alt="user" />
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                
+                <h4 class="book-name"> Book:The Hunger Games by Suzanne Collins </h4>
+                <div id="star-rating">
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                </div>
+                <p>
+                    This book blew me away! The Hunger Games is fast-paced, intense, and emotional. Katniss is such a strong and resilient protagonist.  The dystopian setting feels so real, and I couldn’t stop thinking about it even after I finished. It’s definitely one of the best YA books out there, and I highly recommend it to everyone!
+                </p>
+                <h4>- Marnus Stephen</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-review">
+            <img src="images/man.png" alt="user" />
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <h4 class="book-name"> Book: The Art of Stone </h4>
+                <div id="star-rating">
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                    
+                </div>
+                <p>
+                    A sci-fi classic! Dune is a must-read for fans of the genre.That said, it’s a dense book, and the heavy terminology might be overwhelming at first. But once you get into it, the complexity of the story is what makes it so fascinating.
+                </p>
+                <h4>- Andrew Jettpace</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-review">
+            <img src="images/girl2.png" alt="user" />
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+
+                <h4 class="book-name"> Book: Dune by Frank Herbert</h4>
+                <div id="star-rating">
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                    <span class="star-done" >&#9733;</span>
+                </div>
+                <p>
+                    A sci-fi classic! Dune is a must-read for fans of the genre. The world-building is phenomenal—Herbert creates an intricate universe filled with political intrigue, ecological themes, and a truly unforgettable desert planet. 
+                </p>
+                <h4>- Stacy Stone</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- =========================== -->
+     <!-- ------------star review  -->
+       
+        
+     <section class="rating-review container">
+        <h1> Rate & Review </h1>
+        
+        <form id="review-form">
+            <label for="book-title" class="heading-rate">Book Title:</label>
+            <input type="text" id="book-title" name="book-title" placeholder="Enter the book title" required><br><br>
+        
+            <label for="name" class="heading-rate">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        
+            <label for="rating" class="heading-rate">Rate the book:</label>
+            <div id="star-rating">
+                <span class="star " data-value="1">&#9733;</span>
+                <span class="star " data-value="2">&#9733;</span>
+                <span class="star " data-value="3">&#9733;</span>
+                <span class="star " data-value="4">&#9733;</span>
+                <span class="star " data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="rating" name="rating" value="0">
+        
+            <label for="review" class="heading-rate">Write a review:</label>
+            <textarea id="review" name="review" placeholder="Share your thoughts" required cols="80" rows="15"></textarea><br><br>
+        
+            <label for="image" class="heading-rate">Upload Your Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        
+            <button id="submit-review-btn" class="button">Submit Review</button>
+        </form>
+        
+        
+    </section>
+
+</main>
+
+ <!--=========================================== FOOTER ===========================================================================-->
+ <footer class="footer">
+  <div class="footer-container container grid">
+     <div>
+         <a href="#" class="footer-logo">
+             <i class="ri-book-2-line"></i>BookWorm-Opinions
+         </a>
+
+         <p class="footer-description">
+             Give your valuable reviews and explore  <br>
+             the best eBooks from all your <br>
+             favorite writers.
+         </p>
+     </div>
+
+     <div class="footer-data grid">
+
+         <div>
+                  <h3 class="footer-title"> About </h3>
+                 <ul class="footer-links">
+                   <li>
+                       <a href="#" class="footer-link"> Reviews</a>
+                   </li>
+
+                   <li>
+                       <a href="#" class="footer-link">FAQs</a>
+                   </li>
+                   <li>
+                     <a href="#" class="footer-link"> Privacy policy</a>
+                 </li>
+
+                   <li>
+                       <a href="#" class="footer-link">Terms of services</a>
+                   </li>
+                 </ul>
+       </div>
+
+       <div>
+         <h3 class="footer-title">Community </h3>
+        <ul class="footer-links">
+          <li>
+              <a href="#" class="footer-link"> Feedback</a>
+          </li>
+
+          <li>
+              <a href="#" class="footer-link"> Help center</a>
+          </li>
+        </ul>
+     </div>
+
+        <div>
+                 <h3 class="footer-title">Contact</h3>
+                  <ul class="footer-links">
+                <li>
+                 <address class="footer-info">
+                     Gulshan e Iqbal  <br>
+                     Karachi 4321, Pakistan
+                 </address>
+              </li>
+              <li>
+                 <address class="footer-info">
+                     e.book@email.com <br>
+                     0987-654-321
+                 </address>
+              </li>
+            </ul>
+       </div>
+
+       <div>
+         <h3 class="footer-title">Socials </h3>
+       <div class="footer-social">
+         <a href="https://www.instagram.com/rehmattk24?igsh=MTQxcGtxOTduN2o4ZQ==" target="_blank"  class="footer-social-link">
+             <i class="ri-instagram-line"></i>
+         </a>
+         <a href=" https://snapchat.com/t/L6rxQXdd" target="_blank"  class="footer-social-link">
+             <i class="ri-snapchat-line"></i>
+         </a>
+         <a href="https://pin.it/3Z0qC63Vk" target="_blank"  class="footer-social-link">
+             <i class="ri-pinterest-fill"></i>
+         </a>
+       </div>
+     </div>
+
+     </div>
+  </div>
+  <span class="footer-copy">
+     &#169; All Rights Reserved By RehmatKhan
+  </span>
+</footer>
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+  <i class="ri-arrow-up-line"></i>
+ </a>
+      <!--=============== MAIN JS ===============-->
+      <script src="review.js"></script>
+  </body>
+</html>

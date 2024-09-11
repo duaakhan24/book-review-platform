@@ -1,0 +1,735 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+
+
+
+:root {
+   /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --lightblue-color: hsl(230, 62%, 56%); 
+  --first-color: hsl(230, 62%, 56%);           
+  --title-color: hsl(230, 70%, 16%);      
+  --text-color: hsl(230, 16%, 45%);          
+  --border-color: hsl(230, 50%, 90%);   
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(230, 100%, 96%);
+  --container-color: hsl(230, 100%, 97%);
+
+  /* -------------------------- */
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: .938rem;
+  --header-height: 3.5rem;
+  --font-medium: 500;
+  --z-fixed: 100;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: background-color .4s;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  }
+
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+body.dark-theme{
+
+  --lightblue-color: hsl(230, 62%, 56%); 
+      --title-color: hsl(230, 48%, 85%);
+    --text-color: hsl(230, 16%, 70%);
+    --border-color: hsl(230, 12%, 18%);
+    --body-color: hsl(230, 12%, 8%);
+    --container-color: hsl(230, 12%, 12%);
+
+}
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  .container {
+    max-width: 1220px;
+    margin-inline: 1.5rem;
+  }
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+.section {
+  padding-block: 5rem 1rem;
+}
+
+  /*========== 
+	Color changes in some parts of 
+	the website, in dark theme
+==========*/
+.dark-theme .shadow-header{
+    box-shadow: 0 2px  16px hsla(0, 0%, 0%, .4);
+}
+.dark-theme .nav-menu{
+    box-shadow: 0 -8px  32px hsla(0, 0%, 0%, .4);
+}
+.dark-theme .search{
+    background-color: hsla(230, 12%, 8%, .6);
+}
+/* ----------------------------------------------------------------- */
+
+
+.container-review{
+    
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  margin-top: 5rem;
+}
+
+.container__left-review h1 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+.container__left-review p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.container__right-review {
+    margin-top: 5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.card-review{
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card-review img {
+  max-width: 75px;
+  border-radius: 100%;
+}
+
+.card__content {
+  display: flex;
+  gap: 1rem;
+}
+
+.card__content span i {
+  font-size: 2rem;
+  color: var(--title-color);
+}
+
+.card__details p {
+  font-style: italic;
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.card__details h4 {
+  text-align: right;
+  color: var(--title-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card__details .book-name{
+    text-align: left;
+    color: var(--title-color);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+
+@media (width < 1200px) {
+  .container-review {
+    gap: 3rem;
+  }
+}
+
+@media (width < 900px) {
+  .container-review {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container__right-review {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 750px) {
+  .container__right-review {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+
+
+
+
+/* ===================================================================== */
+
+/*=============== HEADER & NAV ===============*/
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+  transition: box-shadow .4s, background-color .4s;
+}
+.nav{
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+}
+.nav-logo i{
+  font-size: 1.25rem;
+}
+/* Navigation for mobile devices */
+@media screen and (max-width:1150px ) {
+  .nav-menu{
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      width: 100%;
+      background-color: var(--container-color);
+      box-shadow: 0 -8px 32px hsla(0, 0%, 0%, .1);
+      padding: 1.25rem 4rem;
+      transition: background-color .4s;
+  }
+  
+}
+.nav-list{
+  display: flex;
+  justify-content: space-between;
+
+}
+.nav-link{
+  color: var(--text-color);
+  transition: color .4s ;
+}
+.nav-link span{
+  display: none;
+}
+.nav-link i{
+  font-size: 1.25rem;
+}
+.nav-link:hover{
+  color: var(--first-color);
+}
+.nav-actions{
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+.nav-actions i{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color .4s;
+}
+.nav-actions  i:hover{
+  color: var(--first-color);
+}
+/* Add shadow header */
+.shadow-header{
+  box-shadow: 0 2px  16px hsla(0, 0%, 0%, .1);
+}
+
+/* Active link */
+.active-link{
+  color: var(--first-color);
+}
+/*=============== SEARCH ===============*/
+.search{
+    position: fixed; 
+    /* top ko 0 zero karoungi tuh agay ajaeiga ot -100% tuh page picchay chala jaeiga */
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(16px);
+    background-color: hsla(230, 12%, 96%, .6);
+    padding: 8rem 1.5rem;
+    transition: top .4s;
+}
+.search-form{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: var(--container-color);
+    border: 2px solid --border-color;
+    padding-inline: 1rem;
+}
+.search-icon{
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+.search-input{
+    width: 100%;
+    background-color:var(--container-color);
+    color: var(--text-color);
+    padding-block: 1rem;
+
+}
+.search-close{
+    position: absolute;
+    cursor: pointer;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: var(--first-color);
+}
+/* Show search */
+ .show-search{
+    top: 0;
+
+} 
+
+
+  
+/* ============================================================== */
+/* ========================- STAR RATING    ===================== */
+/* Star Rating Style */
+.rating-review {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--border-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.rating-review h1 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--title-color);
+}
+#review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
+}
+
+#review-form label {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+#review-form input,
+#review-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+}
+
+#star-rating {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+#star-rating span {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 50px;
+  color: #ccc; /* Default star color (grey) */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Change color when star is hovered */
+.star:hover,
+.star.active {
+  color: var(--lightblue-color); /* Change this to desired color */
+}
+
+/* When the star is clicked */
+.star-done {
+  font-size: 30px;
+  color: var(--lightblue-color); /* Color for the clicked stars */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Review section styles */
+.review {
+  margin-top: 20px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.review p {
+  margin: 0;
+}
+
+.review span {
+  color: #f39c12;
+}
+
+.heading-rate {
+  color: var(--title-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#book-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*=============== BUTTON ===============*/
+.button{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    font-weight:600;
+    padding: 1rem 1.5rem;
+    transform: box-shadow .4s;
+    outline: none;
+    border: none;
+}
+.button:hover{
+    box-shadow: 0 4px 32px hsla(230, 72%, 32%, .4);
+
+}
+/*=============== FOOTER ===============*/
+.footer{
+    padding-block: 4rem 6rem;
+}
+.footer-container{
+    row-gap: 3rem;
+}
+.footer-logo{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color:  var(--first-color);
+    font-size: 1rem;
+    font-family: "Montagu Slab", serif;
+    margin-bottom: 1.25rem;
+}
+.footer-logo i{
+    font-size: 1.25rem;
+}
+.footer-data{
+    grid-template-columns: repeat(2, max-content);
+    gap: 3rem 2rem;
+}
+.footer-title{
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+.footer-links{
+    display: grid;
+    row-gap: .5rem;
+}
+.footer-link{
+    color:var(--text-color);
+    transition: color .4s;
+}
+.footer-link:hover{
+    color: var(--first-color);
+}
+.footer-info{
+    font-style: normal;
+}
+.footer-social{
+     display: flex;
+     column-gap: 1.25rem;
+}
+.footer-social-link{
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+.footer-copy{
+    display: block;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: .813rem;
+}
+/*=============== SCROLL BAR ===============*/
+
+::-webkit-scrollbar{
+  width: .6rem;
+  border-radius: .5rem;
+  border-radius: .5rem;background-color: hsl(230, 16%, 85%);
+}
+::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  border-radius: .5rem;background-color: hsl(230, 16%, 65%);
+}
+::-webkit-scrollbar-thumb:hover{
+  border-radius: .5rem;background-color: hsl(230, 16%, 55%);
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup{
+  position: fixed;
+  right: 1rem;
+  /* bottom ko -50% kardoungi tuh hide houjaeiga arrow  */
+  bottom: -50%; 
+   /* Make it visible by placing it at the bottom */
+  /* bottom: 1rem; */
+  background-color: var(--container-color);
+  box-shadow: 0 2px 8px hsla(0, 0%, 0%, .1);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s, background-color .4s;
+}
+.scrollup:hover{
+  transform: translateY(-.5rem);
+}
+
+/* Show Scroll Up */
+.show-scroll{
+  bottom: 6rem;
+}
+/* ============================================== RESPONSOIVENESS FOR ALL SCREENS ============================================================================================================== */
+/* ******************************************************************************************************************************************************************************************************* */
+/* For small devices */
+
+@media screen and (max-width :320px ){
+  .container{
+      margin-inline: 1rem;
+  }
+  .nav-menu{
+      padding-inline: 3rem;
+  }
+  .footer-data{
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .rating-review {
+    padding: 10px;
+  }
+
+  #review-form {
+    gap: 8px;
+  }
+
+  #review-form label {
+    font-size: 0.8rem;
+  }
+
+  #review-form input,
+  #review-form textarea {
+    font-size: 0.8rem;
+  }
+
+  #star-rating span {
+    font-size: 1rem;
+  }
+ 
+  .rating-review h1 {
+    font-size: 1.5rem;
+  }
+
+  #submit-review-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .footer-container {
+    padding: 10px;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.8rem;
+  }
+}
+/* For medium devices */
+@media screen and (min-width :576px ){
+  .search-form{
+      width: 500px;
+      margin-inline: auto;
+  }
+  .search-close{
+      width: max-content;
+      top: 4rem;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+  }
+  .nav-menu{
+      width: 380px;
+      margin-inline: auto;
+  }
+ 
+  .footer-data{
+      grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media screen and (min-width :768px ){
+
+  .rating-review {
+    padding: 15px;
+  }
+  #review-form label {
+    font-size: 0.9rem;
+  }
+
+  #review-form input,
+  #review-form textarea {
+    font-size: 0.9rem;
+  }
+
+  #star-rating span {
+    font-size: 1.25rem;
+  }
+  .footer-container{
+      justify-content: space-between;
+      grid-template-columns: repeat(2, max-content);
+       /* flex-direction: column;
+      align-items: center;
+      text-align: center; */
+  } 
+  .footer-data {
+    justify-content: center;
+  } 
+  #review-form input,
+  #review-form textarea {
+    font-size: 1rem;
+  }
+
+  #star-rating span {
+    font-size: 1.25rem;
+  }
+
+  .footer-copy {
+    font-size: 0.9rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width :1150px ){
+  .section{
+    padding-block: 7rem 2rem;
+}
+  .nav{
+      height: calc(var(--header-height) + 2rem);
+      column-gap: 4rem;
+  }
+  .nav-link i{
+      display: none;
+  }
+  .nav-link span{
+      display: block;
+  }
+  .nav-menu{
+      width: inherit;
+      margin-inline: auto 0;
+  }
+  .nav-list{
+      column-gap: 4rem;
+  }
+  .nav-link{
+      font-weight: var(--font-medium);
+  }
+  .dark-theme .nav-menu{
+      box-shadow: none;
+  }
+  .footer{
+      padding-block: 6rem 3rem;
+  }
+  .footer-data{
+      grid-template-columns: repeat(4, max-content);
+      column-gap: 4.5rem;
+  }
+  .footer-logo,
+  .footer-title{
+      font-size: var(--h2-font-size);
+      margin-bottom: 1.5rem;
+  }
+  .footer-links{
+      row-gap: 1rem;
+  }.footer-social{
+      column-gap: 1.5rem;
+  }
+  .footer-social-link{
+      font-size: 1.5rem;
+  }
+  .footer-copy{
+      margin-top: 7.5rem;
+  }
+}
+
+
+@media screen and (min-width :1220px ){
+  .container{
+      margin-inline: auto;
+  }
+
+}

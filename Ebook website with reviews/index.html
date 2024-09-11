@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="images/book.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="styles.css">
+
+      <title>BookWorm Opinions</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav-logo">
+                <i class="ri-book-3-line"></i>Bookworm-Opinions</a>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active-link">
+                                <i class="ri-home-2-line"></i>
+                                <span>Home </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#favorites" class="nav-link">
+                                <i class="ri-heart-2-line"></i>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#publish" class="nav-link">
+                                <i class="ri-discuss-line"></i>
+                                <span> Publish </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#feedback" class="nav-link">
+                                <i class="ri-feedback-line"></i>
+                                <span> Communtiy </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="review.html" class="nav-link">
+                                <i class="ri-book-read-line"></i>
+                                <span> Review</span>
+                            </a>
+                        </li>
+
+                      
+
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <!-- search button -->
+                    <i class="ri-search-2-line search-button " id="search-button"></i>
+
+                    <!-- -----login button -->
+                    <i class="ri-user-3-line login-button" id="login-button"></i>
+
+                    <!-- theme button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+         </nav>
+      </header>
+
+      <!--==================== SEARCH ====================-->
+      <div class="search" id="search-content">
+         <form action="" class="search-form">
+            <i class="ri-search-2-line search-icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search-input">
+         </form>
+         <i class="ri-close-line search-close" id="search-close"></i>
+      </div>
+
+      <!--==================== LOGIN ====================-->
+     
+<div class="login grid" id="login-content">
+   
+    <div class="button-box">
+        
+        <button type="button" class="toggle-btn active-btn" onclick="login()">User</button>
+        <button type="button" class="toggle-btn" onclick="register()">Author</button>
+    </div>
+
+    <!-- Login Form (User) -->
+    <form action="" class="login-form grid input-group" id="login-form">
+        <div class="login-group grid">
+            <div>
+                <label for="login-email-user" class="login-label">Email</label>
+                <input type="email" class="login-input" placeholder="Write your email" id="login-email-user">
+            </div>
+            <div>
+                <label for="login-password-user" class="login-label">Password</label>
+                <input type="password" class="login-input" placeholder="Enter your password" id="login-password-user">
+            </div>
+        </div>
+        <div>
+            <span class="login-signup">
+                Are you an Author? <a href="#">Sign In</a>
+            </span>
+
+            <a href="#" class="login-forgot">Login as Author </a>
+
+            <button type="submit" class="login-button button">Log In </button>
+        </div>
+        
+    </form>
+
+    <!-- Register Form (Author) -->
+    <form action="" class="login-form grid input-group" id="register-form" style="display: none;">
+        <div class="login-group grid">
+            <div>
+                <label for="register-email" class="login-label">Email</label>
+                <input type="email" class="login-input" placeholder="Write your email" id="register-email">
+            </div>
+            <div>
+                <label for="register-password" class="login-label">Password</label>
+                <input type="password" class="login-input" placeholder="Enter your password" id="register-password">
+            </div>
+        </div>
+        <div>
+            <span class="login-signup">
+                Are you a user? <a href="#">Sign In </a>
+            </span>
+
+            <a href="#" class="login-forgot">Login as User </a>
+
+            <button type="submit" class="login-button button"> Login </button>
+        </div>
+    </form>
+    <i class="ri-close-circle-line login-close" id="login-close"></i>
+</div>
+
+
+<!--==============*********************************************************===== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home-container container grid">
+                <div class="home-data">
+                    <h1 class="home-title">
+                        Browse & <br>
+                        Write your Reviews
+                    </h1>
+
+                    <p class="home-description">
+                        Discover in-depth reviews of your favorite books, explore a wide range of genres, and connect with fellow book lovers. Dive into captivating stories, get personalized recommendations, and share your thoughts with a passionate reading community
+                    </p>
+                     
+                    <a href="#" class="button"> Explore Nows</a>
+                </div>
+
+                <div class="home-images">
+                    <div class="home-swiper swiper">
+                        <div class="swiper-wrapper">
+
+                            <article class="home-article  swiper-slide">
+                                <img src="images/book cover/2.png" alt="image" class="home-image">
+                            </article>
+                            <article class="home-article swiper-slide">
+                                <img src="images/book cover/peerkamil.png" alt="image" class="home-image">
+                            </article>
+                            <article class="home-article swiper-slide">
+                                <img src="images/book cover/e.png" alt="image" class="home-image">
+                            </article>
+                            <article class="home-article swiper-slide">
+                                <img src="images/book cover/d.png" alt="image" class="home-image">
+                            </article>
+                            <article class="home-article swiper-slide">
+                                <img src="images/book cover/jannat ka pattay.png" alt="image" class="home-image">
+                            </article>
+                            <article class="home-article swiper-slide">
+                                <img src="images/book cover/f.png" alt="image" class="home-image">
+                            </article>
+
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!--==================== favorites ====================-->
+         <section class="favorites section" id="favorites">
+            <h2 class="section-title"> List Favorite </h2>
+
+            <div class="favorites-container container">
+                <div class="favorites-swiper swiper">
+                    <div class="swiper-wrapper">
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/6.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  The Ideal Muslimah  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Dr.Mohd.Ali -Hashimi</span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/a.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Wings of Love  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Nancy Rivard </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/mala.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Maala  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Nemrah Ahmed </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/yaram.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Yaram  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Sumaira Hameed  </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/jannat ka pattay.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Jannat ka Pattay  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Nemrah Ahmed </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/d.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  The Art of Stone  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Jesse A.Ellis </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/mushaf.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Mushaf  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Nemrah Ahmed </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/b.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  The Secret of Divine Love </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> A.Helwa</span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/c.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Letters from Love  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Flavia Zenari  </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/kahaf novel.jpeg" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Kahaf   </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Rabia Khan </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/namal.png" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Namal  </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Nemrah Ahmed </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+
+                        <article class="favorites-card swiper-slide">
+                            <img src="images/book cover/diyar dil (1).jpeg" alt="image" class="favorites-img">
+
+                            <h2 class="favorites-title">  Darbar e Dil   </h2>
+                            <div class="favorites-prices">
+                            <span class="favorites-discount"> Umerah Ahmed </span>
+                            </div>
+
+                            <button class="button"> Add to Fav </button>
+
+                            <div class="favorites-actions">
+                                <button><i class="ri-search-eye-line"></i></button>
+                                <button><i class="ri-heart-3-line"></i></button>
+                                <button><i class="ri-eye-line"></i></button>
+                            </div>
+                        </article>
+                    </div>
+
+                   <!-- If we need navigation buttons -->
+                   <div class="swiper-button-prev">
+                    <i class="ri-arrow-left-s-line"></i>
+                   </div>
+                   <div class="swiper-button-next">
+                    <i class="ri-arrow-right-s-line"></i>
+                   </div>
+
+
+                </div>
+            </div>
+         </section>
+
+            <!--==================== PUBLISH  ====================-->
+            <section class="publish section" id="publish">
+               <div class="publish-container container grid">
+                <div class="publish-data">
+                    <h2 class="publish-title section-title">
+                        Want to Publish your book?
+                    </h2>
+                    <p class="public-description">
+                        Share your masterpiece with a passionate audience! Upload your book today and connect with readers ready to dive into your story.
+                    </p>
+                    <a href="publish.html" class="button"> Publish Now </a>
+                </div>
+                <div class="publish-images">
+                    <img src="images/discount-book-1.png" alt="image" class="publish-img-1">
+                    <img src="images/discount-book-2.png" alt="image" class="publish-img-2">
+                </div>
+               </div>
+                
+             </section>
+
+         <!--==================== Community  FEEDBACK ====================-->
+         <section class="feedback section" id="feedback">
+            <h2 class="section-title">
+                Community  Opinions
+            </h2>
+
+            <div class="feedback-container container">
+                <div class="feedback-swiper swiper">
+                    <div class="swiper-wrapper">
+
+                        <article class="feedback-card swiper-slide">
+                            <img src="images/girl1.png" alt="image" class="feedback-img">
+
+                            <h2 class="feedback-title"> Ayesha Anwar </h2>
+                            <p class="feedback-description">
+                                "The review section is quite interactive, and I love the image upload feature! I love that there is  a dark mode option for late-night reading. Great job on the platform! if i would i woukd rate it 10/10"
+                            </p>
+                            <div class="feedback-stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                            </div>
+                        </article>
+
+                        <article class="feedback-card swiper-slide">
+                            <img src="images/ptrofiles pic.png" alt="image" class="feedback-img">
+
+                            <h2 class="feedback-title"> M.Tariq </h2>
+                            <p class="feedback-description">
+                                "Fantastic user experience! The layout is well-organized, and I appreciate how quickly I can submit my reviews. The site is responsive and looks great on mobile too. Keep up the great work!"
+                            </p>
+                            <div class="feedback-stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                
+                            </div>
+                        </article>
+
+                        <article class="feedback-card swiper-slide">
+                            <img src="images/girl2.png" alt="image" class="feedback-img">
+
+                            <h2 class="feedback-title"> Madiha Hussain</h2>
+                            <p class="feedback-description">
+                                "Absolutely love this platform! It's easy to use, and the design is clean and inviting. Adding my reviews was super simple, and I enjoy reading other users' thoughts on books I’m interested in."
+
+
+                            </p>
+                            <div class="feedback-stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                
+                            </div>
+                        </article>
+
+                        <article class="feedback-card swiper-slide">
+                            <img src="images/man.png" alt="image" class="feedback-img">
+
+                            <h2 class="feedback-title"> Syed Bilal </h2>
+                            <p class="feedback-description">
+                                "I’ve been using this platform regularly, and it’s amazing! Everything is straightforward, the rating system is simple to use, and the design makes reading and reviewing books enjoyable. Highly recommend!"
+                            </p>
+                            <div class="feedback-stars">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+         </section>
+
+      </main>
+
+      <!--=========================================== FOOTER ===========================================================================-->
+      <footer class="footer">
+         <div class="footer-container container grid">
+            <div>
+                <a href="#" class="footer-logo">
+                    <i class="ri-book-2-line"></i>BookWorm-Opinions
+                </a>
+
+                <p class="footer-description">
+                    Give your valuable reviews and explore  <br>
+                    the best eBooks from all your <br>
+                    favorite writers.
+                </p>
+            </div>
+
+            <div class="footer-data grid">
+
+                <div>
+                         <h3 class="footer-title"> About </h3>
+                        <ul class="footer-links">
+                          <li>
+                              <a href="#" class="footer-link"> Reviews</a>
+                          </li>
+      
+                          <li>
+                              <a href="#" class="footer-link">FAQs</a>
+                          </li>
+                          <li>
+                            <a href="#" class="footer-link"> Privacy policy</a>
+                        </li>
+
+                          <li>
+                              <a href="#" class="footer-link">Terms of services</a>
+                          </li>
+                        </ul>
+              </div>
+
+              <div>
+                <h3 class="footer-title">Community </h3>
+               <ul class="footer-links">
+                 <li>
+                     <a href="#" class="footer-link"> Feedback</a>
+                 </li>
+
+                 <li>
+                     <a href="#" class="footer-link"> Help center</a>
+                 </li>
+               </ul>
+            </div>
+
+               <div>
+                        <h3 class="footer-title">Contact</h3>
+                         <ul class="footer-links">
+                       <li>
+                        <address class="footer-info">
+                            Gulshan e Iqbal  <br>
+                            Karachi 4321, Pakistan
+                        </address>
+                     </li>
+                     <li>
+                        <address class="footer-info">
+                            e.book@email.com <br>
+                            0987-654-321
+                        </address>
+                     </li>
+                   </ul>
+              </div>
+
+              <div>
+                <h3 class="footer-title">Socials </h3>
+              <div class="footer-social">
+                <a href="https://www.instagram.com/rehmattk24?igsh=MTQxcGtxOTduN2o4ZQ==" target="_blank"  class="footer-social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href=" https://snapchat.com/t/L6rxQXdd" target="_blank"  class="footer-social-link">
+                    <i class="ri-snapchat-line"></i>
+                </a>
+                <a href="https://pin.it/3Z0qC63Vk" target="_blank"  class="footer-social-link">
+                    <i class="ri-pinterest-fill"></i>
+                </a>
+              </div>
+            </div>
+
+            </div>
+         </div>
+         <span class="footer-copy">
+            &#169; All Rights Reserved By RehmatKhan
+         </span>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="scrollreveal.min.js"></script>
+
+      <!--=============== SWIPER JS ===============-->
+      <script src="swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="script.js"></script>
+   </body>
+</html>
